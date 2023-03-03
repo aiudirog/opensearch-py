@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Indices Client &mdash; OpenSearch Python Client  documentation</title>
@@ -33,12 +33,16 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../index.html" class="icon icon-home"> OpenSearch Python Client
-            <img src="../../_static/OpenSearch.svg" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            OpenSearch Python Client
+              <img src="../../_static/OpenSearch.svg" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -66,6 +70,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../connection.html">connection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../connection_pool.html">connection_pool</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../exceptions.html">exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../helpers.html">helpers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plugins.html">Plugins</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../serializer.html">serializer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../transport.html">transport</a></li>
@@ -92,7 +97,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../../api-ref.html">API Reference</a></li>
           <li class="breadcrumb-item"><a href="../client.html">Clients</a></li>
       <li class="breadcrumb-item active">Indices Client</li>
@@ -116,7 +121,7 @@
 <span class="sig-name descname"><span class="pre">add_block</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/opensearchpy/client/indices.html#IndicesClient.add_block"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opensearchpy.client.indices.IndicesClient.add_block" title="Permalink to this definition"></a></dt>
 <dd><p>Adds a block to an index.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>index</strong> – A comma separated list of indices to add a block to</p></li>
 <li><p><strong>block</strong> – The block to add (one of read, write, read_only or
@@ -129,7 +134,8 @@ concrete indices that are open, closed or both.  Valid choices: open,
 closed, hidden, none, all  Default: open</p></li>
 <li><p><strong>ignore_unavailable</strong> – Whether specified concrete indices
 should be ignored when unavailable (missing or closed)</p></li>
-<li><p><strong>master_timeout</strong> – Specify timeout for connection to master</p></li>
+<li><p><strong>(</strong><strong>Deprecated</strong> (<em>master_timeout</em>) – use cluster_manager_timeout): Specify timeout for connection to master</p></li>
+<li><p><strong>cluster_manager_timeout</strong> – Specify timeout for connection to cluster_manager</p></li>
 <li><p><strong>timeout</strong> – Explicit operation timeout</p></li>
 </ul>
 </dd>
@@ -142,7 +148,7 @@ should be ignored when unavailable (missing or closed)</p></li>
 <dd><p>Performs the analysis process on a text and return the tokens breakdown of the
 text.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>body</strong> – Define analyzer/tokenizer parameters and the text on
 which the analysis should be performed</p></li>
@@ -157,7 +163,7 @@ which the analysis should be performed</p></li>
 <span class="sig-name descname"><span class="pre">clear_cache</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/opensearchpy/client/indices.html#IndicesClient.clear_cache"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opensearchpy.client.indices.IndicesClient.clear_cache" title="Permalink to this definition"></a></dt>
 <dd><p>Clears all or specific caches for one or more indices.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>index</strong> – A comma-separated list of index name to limit the
 operation</p></li>
@@ -184,13 +190,14 @@ should be ignored when unavailable (missing or closed)</p></li>
 <span class="sig-name descname"><span class="pre">clone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/opensearchpy/client/indices.html#IndicesClient.clone"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opensearchpy.client.indices.IndicesClient.clone" title="Permalink to this definition"></a></dt>
 <dd><p>Clones an index</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>index</strong> – The name of the source index to clone</p></li>
 <li><p><strong>target</strong> – The name of the target index to clone into</p></li>
 <li><p><strong>body</strong> – The configuration for the target index (<cite>settings</cite>
 and <cite>aliases</cite>)</p></li>
-<li><p><strong>master_timeout</strong> – Specify timeout for connection to master</p></li>
+<li><p><strong>(</strong><strong>Deprecated</strong> (<em>master_timeout</em>) – use cluster_manager_timeout): Specify timeout for connection to master</p></li>
+<li><p><strong>cluster_manager_timeout</strong> – Specify timeout for connection to cluster_manager</p></li>
 <li><p><strong>timeout</strong> – Explicit operation timeout</p></li>
 <li><p><strong>wait_for_active_shards</strong> – Set the number of active shards to
 wait for on the cloned index before the operation returns.</p></li>
@@ -204,7 +211,7 @@ wait for on the cloned index before the operation returns.</p></li>
 <span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/opensearchpy/client/indices.html#IndicesClient.close"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opensearchpy.client.indices.IndicesClient.close" title="Permalink to this definition"></a></dt>
 <dd><p>Closes an index.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>index</strong> – A comma separated list of indices to close</p></li>
 <li><p><strong>allow_no_indices</strong> – Whether to ignore if a wildcard indices
@@ -215,7 +222,8 @@ concrete indices that are open, closed or both.  Valid choices: open,
 closed, hidden, none, all  Default: open</p></li>
 <li><p><strong>ignore_unavailable</strong> – Whether specified concrete indices
 should be ignored when unavailable (missing or closed)</p></li>
-<li><p><strong>master_timeout</strong> – Specify timeout for connection to master</p></li>
+<li><p><strong>(</strong><strong>Deprecated</strong> (<em>master_timeout</em>) – use cluster_manager_timeout): Specify timeout for connection to master</p></li>
+<li><p><strong>cluster_manager_timeout</strong> – Specify timeout for connection to cluster_manager</p></li>
 <li><p><strong>timeout</strong> – Explicit operation timeout</p></li>
 <li><p><strong>wait_for_active_shards</strong> – Sets the number of active shards to
 wait for before the operation returns. Set to <cite>index-setting</cite> to wait
@@ -231,12 +239,13 @@ according to the index setting <cite>index.write.wait_for_active_shards</cite>, 
 <span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/opensearchpy/client/indices.html#IndicesClient.create"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opensearchpy.client.indices.IndicesClient.create" title="Permalink to this definition"></a></dt>
 <dd><p>Creates an index with optional settings and mappings.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>index</strong> – The name of the index</p></li>
 <li><p><strong>body</strong> – The configuration for the index (<cite>settings</cite> and
 <cite>mappings</cite>)</p></li>
-<li><p><strong>master_timeout</strong> – Specify timeout for connection to master</p></li>
+<li><p><strong>(</strong><strong>Deprecated</strong> (<em>master_timeout</em>) – use cluster_manager_timeout): Specify timeout for connection to master</p></li>
+<li><p><strong>cluster_manager_timeout</strong> – Specify timeout for connection to cluster_manager</p></li>
 <li><p><strong>timeout</strong> – Explicit operation timeout</p></li>
 <li><p><strong>wait_for_active_shards</strong> – Set the number of active shards to
 wait for before the operation returns.</p></li>
@@ -250,7 +259,7 @@ wait for before the operation returns.</p></li>
 <span class="sig-name descname"><span class="pre">create_data_stream</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/opensearchpy/client/indices.html#IndicesClient.create_data_stream"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opensearchpy.client.indices.IndicesClient.create_data_stream" title="Permalink to this definition"></a></dt>
 <dd><p>Creates a data stream</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>name</strong> – The name of the data stream</p>
 </dd>
 </dl>
@@ -261,7 +270,7 @@ wait for before the operation returns.</p></li>
 <span class="sig-name descname"><span class="pre">data_streams_stats</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/opensearchpy/client/indices.html#IndicesClient.data_streams_stats"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opensearchpy.client.indices.IndicesClient.data_streams_stats" title="Permalink to this definition"></a></dt>
 <dd><p>Provides statistics on operations happening in a data stream.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>name</strong> – A comma-separated list of data stream names; use
 <cite>_all</cite> or empty string to perform the operation on all data streams</p>
 </dd>
@@ -273,7 +282,7 @@ wait for before the operation returns.</p></li>
 <span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/opensearchpy/client/indices.html#IndicesClient.delete"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opensearchpy.client.indices.IndicesClient.delete" title="Permalink to this definition"></a></dt>
 <dd><p>Deletes an index.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>index</strong> – A comma-separated list of indices to delete; use
 <cite>_all</cite> or <cite>*</cite> string to delete all indices</p></li>
@@ -284,7 +293,8 @@ expanded to open or closed indices (default: open)  Valid choices: open,
 closed, hidden, none, all  Default: open</p></li>
 <li><p><strong>ignore_unavailable</strong> – Ignore unavailable indexes (default:
 false)</p></li>
-<li><p><strong>master_timeout</strong> – Specify timeout for connection to master</p></li>
+<li><p><strong>(</strong><strong>Deprecated</strong> (<em>master_timeout</em>) – use cluster_manager_timeout): Specify timeout for connection to master</p></li>
+<li><p><strong>cluster_manager_timeout</strong> – Specify timeout for connection to cluster_manager</p></li>
 <li><p><strong>timeout</strong> – Explicit operation timeout</p></li>
 </ul>
 </dd>
@@ -296,13 +306,14 @@ false)</p></li>
 <span class="sig-name descname"><span class="pre">delete_alias</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/opensearchpy/client/indices.html#IndicesClient.delete_alias"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opensearchpy.client.indices.IndicesClient.delete_alias" title="Permalink to this definition"></a></dt>
 <dd><p>Deletes an alias.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>index</strong> – A comma-separated list of index names (supports
 wildcards); use <cite>_all</cite> for all indices</p></li>
 <li><p><strong>name</strong> – A comma-separated list of aliases to delete (supports
 wildcards); use <cite>_all</cite> to delete all aliases for the specified indices.</p></li>
-<li><p><strong>master_timeout</strong> – Specify timeout for connection to master</p></li>
+<li><p><strong>(</strong><strong>Deprecated</strong> (<em>master_timeout</em>) – use cluster_manager_timeout): Specify timeout for connection to master</p></li>
+<li><p><strong>cluster_manager_timeout</strong> – Specify timeout for connection to cluster_manager</p></li>
 <li><p><strong>timeout</strong> – Explicit timestamp for the document</p></li>
 </ul>
 </dd>
@@ -314,7 +325,7 @@ wildcards); use <cite>_all</cite> to delete all aliases for the specified indice
 <span class="sig-name descname"><span class="pre">delete_data_stream</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/opensearchpy/client/indices.html#IndicesClient.delete_data_stream"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opensearchpy.client.indices.IndicesClient.delete_data_stream" title="Permalink to this definition"></a></dt>
 <dd><p>Deletes a data stream.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> – A comma-separated list of data streams to delete; use
 <cite>*</cite> to delete all data streams</p></li>
@@ -331,10 +342,11 @@ closed, hidden, none, all  Default: open</p></li>
 <span class="sig-name descname"><span class="pre">delete_index_template</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/opensearchpy/client/indices.html#IndicesClient.delete_index_template"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opensearchpy.client.indices.IndicesClient.delete_index_template" title="Permalink to this definition"></a></dt>
 <dd><p>Deletes an index template.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> – The name of the template</p></li>
-<li><p><strong>master_timeout</strong> – Specify timeout for connection to master</p></li>
+<li><p><strong>(</strong><strong>Deprecated</strong> (<em>master_timeout</em>) – use cluster_manager_timeout): Specify timeout for connection to master</p></li>
+<li><p><strong>cluster_manager_timeout</strong> – Specify timeout for connection to cluster_manager</p></li>
 <li><p><strong>timeout</strong> – Explicit operation timeout</p></li>
 </ul>
 </dd>
@@ -346,10 +358,11 @@ closed, hidden, none, all  Default: open</p></li>
 <span class="sig-name descname"><span class="pre">delete_template</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/opensearchpy/client/indices.html#IndicesClient.delete_template"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opensearchpy.client.indices.IndicesClient.delete_template" title="Permalink to this definition"></a></dt>
 <dd><p>Deletes an index template.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> – The name of the template</p></li>
-<li><p><strong>master_timeout</strong> – Specify timeout for connection to master</p></li>
+<li><p><strong>(</strong><strong>Deprecated</strong> (<em>master_timeout</em>) – use cluster_manager_timeout): Specify timeout for connection to master</p></li>
+<li><p><strong>cluster_manager_timeout</strong> – Specify timeout for connection to cluster_manager</p></li>
 <li><p><strong>timeout</strong> – Explicit operation timeout</p></li>
 </ul>
 </dd>
@@ -366,7 +379,7 @@ closed, hidden, none, all  Default: open</p></li>
 or be removed in a future version</p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>index</strong> – Comma-separated list of indices or data streams to
 analyze the disk usage</p></li>
@@ -392,7 +405,7 @@ task to be performed. Defaults to false.</p></li>
 <span class="sig-name descname"><span class="pre">exists</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/opensearchpy/client/indices.html#IndicesClient.exists"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opensearchpy.client.indices.IndicesClient.exists" title="Permalink to this definition"></a></dt>
 <dd><p>Returns information about whether a particular index exists.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>index</strong> – A comma-separated list of index names</p></li>
 <li><p><strong>allow_no_indices</strong> – Ignore if a wildcard expression resolves
@@ -407,7 +420,7 @@ false)</p></li>
 <li><p><strong>include_defaults</strong> – Whether to return all default setting for
 each of the indices.</p></li>
 <li><p><strong>local</strong> – Return local information, do not retrieve the state
-from master node (default: false)</p></li>
+from cluster_manager node (default: false)</p></li>
 </ul>
 </dd>
 </dl>
@@ -418,7 +431,7 @@ from master node (default: false)</p></li>
 <span class="sig-name descname"><span class="pre">exists_alias</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/opensearchpy/client/indices.html#IndicesClient.exists_alias"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opensearchpy.client.indices.IndicesClient.exists_alias" title="Permalink to this definition"></a></dt>
 <dd><p>Returns information about whether a particular alias exists.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> – A comma-separated list of alias names to return</p></li>
 <li><p><strong>index</strong> – A comma-separated list of index names to filter
@@ -432,7 +445,7 @@ closed, hidden, none, all  Default: all</p></li>
 <li><p><strong>ignore_unavailable</strong> – Whether specified concrete indices
 should be ignored when unavailable (missing or closed)</p></li>
 <li><p><strong>local</strong> – Return local information, do not retrieve the state
-from master node (default: false)</p></li>
+from cluster_manager node (default: false)</p></li>
 </ul>
 </dd>
 </dl>
@@ -443,15 +456,17 @@ from master node (default: false)</p></li>
 <span class="sig-name descname"><span class="pre">exists_index_template</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/opensearchpy/client/indices.html#IndicesClient.exists_index_template"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opensearchpy.client.indices.IndicesClient.exists_index_template" title="Permalink to this definition"></a></dt>
 <dd><p>Returns information about whether a particular index template exists.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> – The name of the template</p></li>
 <li><p><strong>flat_settings</strong> – Return settings in flat format (default:
 false)</p></li>
 <li><p><strong>local</strong> – Return local information, do not retrieve the state
-from master node (default: false)</p></li>
-<li><p><strong>master_timeout</strong> – Explicit operation timeout for connection
+from cluster_manager node (default: false)</p></li>
+<li><p><strong>(</strong><strong>Deprecated</strong> (<em>master_timeout</em>) – use cluster_manager_timeout): Explicit operation timeout for connection
 to master node</p></li>
+<li><p><strong>cluster_manager_timeout</strong> – Explicit operation timeout for connection
+to cluster_manager node</p></li>
 </ul>
 </dd>
 </dl>
@@ -462,15 +477,17 @@ to master node</p></li>
 <span class="sig-name descname"><span class="pre">exists_template</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/opensearchpy/client/indices.html#IndicesClient.exists_template"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opensearchpy.client.indices.IndicesClient.exists_template" title="Permalink to this definition"></a></dt>
 <dd><p>Returns information about whether a particular index template exists.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> – The comma separated names of the index templates</p></li>
 <li><p><strong>flat_settings</strong> – Return settings in flat format (default:
 false)</p></li>
 <li><p><strong>local</strong> – Return local information, do not retrieve the state
-from master node (default: false)</p></li>
-<li><p><strong>master_timeout</strong> – Explicit operation timeout for connection
+from cluster_manager node (default: false)</p></li>
+<li><p><strong>(</strong><strong>Deprecated</strong> (<em>master_timeout</em>) – use cluster_manager_timeout): Explicit operation timeout for connection
 to master node</p></li>
+<li><p><strong>cluster_manager_timeout</strong> – Explicit operation timeout for connection
+to cluster_manager node</p></li>
 </ul>
 </dd>
 </dl>
@@ -486,7 +503,7 @@ to master node</p></li>
 or be removed in a future version</p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>index</strong> – A comma-separated list of index names; use <cite>_all</cite> or
 empty string to perform the operation on all indices</p></li>
@@ -510,7 +527,7 @@ should be ignored when unavailable (missing or closed)</p></li>
 <span class="sig-name descname"><span class="pre">flush</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/opensearchpy/client/indices.html#IndicesClient.flush"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opensearchpy.client.indices.IndicesClient.flush" title="Permalink to this definition"></a></dt>
 <dd><p>Performs the flush operation on one or more indices.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>index</strong> – A comma-separated list of index names; use <cite>_all</cite> or
 empty string for all indices</p></li>
@@ -542,7 +559,7 @@ be skipped iff if another flush operation is already running.</p></li>
 <dd><p>Performs a synced flush operation on one or more indices. Synced flush is
 deprecated. Use flush instead</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>index</strong> – A comma-separated list of index names; use <cite>_all</cite> or
 empty string for all indices</p></li>
@@ -564,7 +581,7 @@ should be ignored when unavailable (missing or closed)</p></li>
 <span class="sig-name descname"><span class="pre">forcemerge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/opensearchpy/client/indices.html#IndicesClient.forcemerge"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opensearchpy.client.indices.IndicesClient.forcemerge" title="Permalink to this definition"></a></dt>
 <dd><p>Performs the force merge operation on one or more indices.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>index</strong> – A comma-separated list of index names; use <cite>_all</cite> or
 empty string to perform the operation on all indices</p></li>
@@ -593,7 +610,7 @@ only expunge deleted documents</p></li>
 <dd><p>Freezes an index. A frozen index has almost no overhead on the cluster (except
 for maintaining its metadata in memory) and is read-only.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>index</strong> – The name of the index to freeze</p></li>
 <li><p><strong>allow_no_indices</strong> – Whether to ignore if a wildcard indices
@@ -604,7 +621,8 @@ concrete indices that are open, closed or both.  Valid choices: open,
 closed, hidden, none, all  Default: closed</p></li>
 <li><p><strong>ignore_unavailable</strong> – Whether specified concrete indices
 should be ignored when unavailable (missing or closed)</p></li>
-<li><p><strong>master_timeout</strong> – Specify timeout for connection to master</p></li>
+<li><p><strong>(</strong><strong>Deprecated</strong> (<em>master_timeout</em>) – use cluster_manager_timeout): Specify timeout for connection to master</p></li>
+<li><p><strong>cluster_manager_timeout</strong> – Specify timeout for connection to cluster_manager</p></li>
 <li><p><strong>timeout</strong> – Explicit operation timeout</p></li>
 <li><p><strong>wait_for_active_shards</strong> – Sets the number of active shards to
 wait for before the operation returns.</p></li>
@@ -618,7 +636,7 @@ wait for before the operation returns.</p></li>
 <span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/opensearchpy/client/indices.html#IndicesClient.get"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opensearchpy.client.indices.IndicesClient.get" title="Permalink to this definition"></a></dt>
 <dd><p>Returns information about one or more indices.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>index</strong> – A comma-separated list of index names</p></li>
 <li><p><strong>allow_no_indices</strong> – Ignore if a wildcard expression resolves
@@ -633,8 +651,9 @@ false)</p></li>
 <li><p><strong>include_defaults</strong> – Whether to return all default setting for
 each of the indices.</p></li>
 <li><p><strong>local</strong> – Return local information, do not retrieve the state
-from master node (default: false)</p></li>
-<li><p><strong>master_timeout</strong> – Specify timeout for connection to master</p></li>
+from cluster_manager node (default: false)</p></li>
+<li><p><strong>(</strong><strong>Deprecated</strong> (<em>master_timeout</em>) – use cluster_manager_timeout): Specify timeout for connection to master</p></li>
+<li><p><strong>cluster_manager_timeout</strong> – Specify timeout for connection to cluster_manager</p></li>
 </ul>
 </dd>
 </dl>
@@ -645,7 +664,7 @@ from master node (default: false)</p></li>
 <span class="sig-name descname"><span class="pre">get_alias</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/opensearchpy/client/indices.html#IndicesClient.get_alias"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opensearchpy.client.indices.IndicesClient.get_alias" title="Permalink to this definition"></a></dt>
 <dd><p>Returns an alias.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>index</strong> – A comma-separated list of index names to filter
 aliases</p></li>
@@ -659,7 +678,7 @@ closed, hidden, none, all  Default: all</p></li>
 <li><p><strong>ignore_unavailable</strong> – Whether specified concrete indices
 should be ignored when unavailable (missing or closed)</p></li>
 <li><p><strong>local</strong> – Return local information, do not retrieve the state
-from master node (default: false)</p></li>
+from cluster_manager node (default: false)</p></li>
 </ul>
 </dd>
 </dl>
@@ -670,7 +689,7 @@ from master node (default: false)</p></li>
 <span class="sig-name descname"><span class="pre">get_data_stream</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/opensearchpy/client/indices.html#IndicesClient.get_data_stream"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opensearchpy.client.indices.IndicesClient.get_data_stream" title="Permalink to this definition"></a></dt>
 <dd><p>Returns data streams.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> – A comma-separated list of data streams to get; use
 <cite>*</cite> to get all data streams</p></li>
@@ -687,7 +706,7 @@ closed, hidden, none, all  Default: open</p></li>
 <span class="sig-name descname"><span class="pre">get_field_mapping</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fields</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/opensearchpy/client/indices.html#IndicesClient.get_field_mapping"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opensearchpy.client.indices.IndicesClient.get_field_mapping" title="Permalink to this definition"></a></dt>
 <dd><p>Returns mapping for one or more fields.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>fields</strong> – A comma-separated list of fields</p></li>
 <li><p><strong>index</strong> – A comma-separated list of index names</p></li>
@@ -702,7 +721,7 @@ should be ignored when unavailable (missing or closed)</p></li>
 <li><p><strong>include_defaults</strong> – Whether the default mapping values should
 be returned as well</p></li>
 <li><p><strong>local</strong> – Return local information, do not retrieve the state
-from master node (default: false)</p></li>
+from cluster_manager node (default: false)</p></li>
 </ul>
 </dd>
 </dl>
@@ -713,15 +732,17 @@ from master node (default: false)</p></li>
 <span class="sig-name descname"><span class="pre">get_index_template</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/opensearchpy/client/indices.html#IndicesClient.get_index_template"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opensearchpy.client.indices.IndicesClient.get_index_template" title="Permalink to this definition"></a></dt>
 <dd><p>Returns an index template.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> – The comma separated names of the index templates</p></li>
 <li><p><strong>flat_settings</strong> – Return settings in flat format (default:
 false)</p></li>
 <li><p><strong>local</strong> – Return local information, do not retrieve the state
-from master node (default: false)</p></li>
-<li><p><strong>master_timeout</strong> – Explicit operation timeout for connection
+from cluster_manager node (default: false)</p></li>
+<li><p><strong>(</strong><strong>Deprecated</strong> (<em>master_timeout</em>) – use cluster_manager_timeout): Explicit operation timeout for connection
 to master node</p></li>
+<li><p><strong>cluster_manager_timeout</strong> – Explicit operation timeout for connection
+to cluster_manager node</p></li>
 </ul>
 </dd>
 </dl>
@@ -732,7 +753,7 @@ to master node</p></li>
 <span class="sig-name descname"><span class="pre">get_mapping</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/opensearchpy/client/indices.html#IndicesClient.get_mapping"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opensearchpy.client.indices.IndicesClient.get_mapping" title="Permalink to this definition"></a></dt>
 <dd><p>Returns mappings for one or more indices.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>index</strong> – A comma-separated list of index names</p></li>
 <li><p><strong>allow_no_indices</strong> – Whether to ignore if a wildcard indices
@@ -744,8 +765,9 @@ closed, hidden, none, all  Default: open</p></li>
 <li><p><strong>ignore_unavailable</strong> – Whether specified concrete indices
 should be ignored when unavailable (missing or closed)</p></li>
 <li><p><strong>local</strong> – Return local information, do not retrieve the state
-from master node (default: false)</p></li>
-<li><p><strong>master_timeout</strong> – Specify timeout for connection to master</p></li>
+from cluster_manager node (default: false)</p></li>
+<li><p><strong>(</strong><strong>Deprecated</strong> (<em>master_timeout</em>) – use cluster_manager_timeout): Specify timeout for connection to master</p></li>
+<li><p><strong>cluster_manager_timeout</strong> – Specify timeout for connection to cluster_manager</p></li>
 </ul>
 </dd>
 </dl>
@@ -756,7 +778,7 @@ from master node (default: false)</p></li>
 <span class="sig-name descname"><span class="pre">get_settings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/opensearchpy/client/indices.html#IndicesClient.get_settings"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opensearchpy.client.indices.IndicesClient.get_settings" title="Permalink to this definition"></a></dt>
 <dd><p>Returns settings for one or more indices.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>index</strong> – A comma-separated list of index names; use <cite>_all</cite> or
 empty string to perform the operation on all indices</p></li>
@@ -774,8 +796,9 @@ should be ignored when unavailable (missing or closed)</p></li>
 <li><p><strong>include_defaults</strong> – Whether to return all default setting for
 each of the indices.</p></li>
 <li><p><strong>local</strong> – Return local information, do not retrieve the state
-from master node (default: false)</p></li>
-<li><p><strong>master_timeout</strong> – Specify timeout for connection to master</p></li>
+from cluster_manager node (default: false)</p></li>
+<li><p><strong>(</strong><strong>Deprecated</strong> (<em>master_timeout</em>) – use cluster_manager_timeout): Specify timeout for connection to master</p></li>
+<li><p><strong>cluster_manager_timeout</strong> – Specify timeout for connection to cluster_manager</p></li>
 </ul>
 </dd>
 </dl>
@@ -786,15 +809,17 @@ from master node (default: false)</p></li>
 <span class="sig-name descname"><span class="pre">get_template</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/opensearchpy/client/indices.html#IndicesClient.get_template"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opensearchpy.client.indices.IndicesClient.get_template" title="Permalink to this definition"></a></dt>
 <dd><p>Returns an index template.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> – The comma separated names of the index templates</p></li>
 <li><p><strong>flat_settings</strong> – Return settings in flat format (default:
 false)</p></li>
 <li><p><strong>local</strong> – Return local information, do not retrieve the state
-from master node (default: false)</p></li>
-<li><p><strong>master_timeout</strong> – Explicit operation timeout for connection
+from cluster_manager node (default: false)</p></li>
+<li><p><strong>(</strong><strong>Deprecated</strong> (<em>master_timeout</em>) – use cluster_manager_timeout): Explicit operation timeout for connection
 to master node</p></li>
+<li><p><strong>cluster_manager_timeout</strong> – Explicit operation timeout for connection
+to cluster_manager node</p></li>
 </ul>
 </dd>
 </dl>
@@ -805,7 +830,7 @@ to master node</p></li>
 <span class="sig-name descname"><span class="pre">get_upgrade</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/opensearchpy/client/indices.html#IndicesClient.get_upgrade"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opensearchpy.client.indices.IndicesClient.get_upgrade" title="Permalink to this definition"></a></dt>
 <dd><p>DEPRECATED Returns a progress status of current upgrade.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>index</strong> – A comma-separated list of index names; use <cite>_all</cite> or
 empty string to perform the operation on all indices</p></li>
@@ -827,7 +852,7 @@ should be ignored when unavailable (missing or closed)</p></li>
 <span class="sig-name descname"><span class="pre">migrate_to_data_stream</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/opensearchpy/client/indices.html#IndicesClient.migrate_to_data_stream"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opensearchpy.client.indices.IndicesClient.migrate_to_data_stream" title="Permalink to this definition"></a></dt>
 <dd><p>Migrates an alias to a data stream</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>name</strong> – The name of the alias to migrate</p>
 </dd>
 </dl>
@@ -838,7 +863,7 @@ should be ignored when unavailable (missing or closed)</p></li>
 <span class="sig-name descname"><span class="pre">open</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/opensearchpy/client/indices.html#IndicesClient.open"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opensearchpy.client.indices.IndicesClient.open" title="Permalink to this definition"></a></dt>
 <dd><p>Opens an index.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>index</strong> – A comma separated list of indices to open</p></li>
 <li><p><strong>allow_no_indices</strong> – Whether to ignore if a wildcard indices
@@ -849,7 +874,8 @@ concrete indices that are open, closed or both.  Valid choices: open,
 closed, hidden, none, all  Default: closed</p></li>
 <li><p><strong>ignore_unavailable</strong> – Whether specified concrete indices
 should be ignored when unavailable (missing or closed)</p></li>
-<li><p><strong>master_timeout</strong> – Specify timeout for connection to master</p></li>
+<li><p><strong>(</strong><strong>Deprecated</strong> (<em>master_timeout</em>) – use cluster_manager_timeout): Specify timeout for connection to master</p></li>
+<li><p><strong>cluster_manager_timeout</strong> – Specify timeout for connection to cluster_manager</p></li>
 <li><p><strong>timeout</strong> – Explicit operation timeout</p></li>
 <li><p><strong>wait_for_active_shards</strong> – Sets the number of active shards to
 wait for before the operation returns.</p></li>
@@ -864,7 +890,7 @@ wait for before the operation returns.</p></li>
 <dd><p>Promotes a data stream from a replicated data stream managed by CCR to a
 regular data stream</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>name</strong> – The name of the data stream</p>
 </dd>
 </dl>
@@ -875,7 +901,7 @@ regular data stream</p>
 <span class="sig-name descname"><span class="pre">put_alias</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/opensearchpy/client/indices.html#IndicesClient.put_alias"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opensearchpy.client.indices.IndicesClient.put_alias" title="Permalink to this definition"></a></dt>
 <dd><p>Creates or updates an alias.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>index</strong> – A comma-separated list of index names the alias
 should point to (supports wildcards); use <cite>_all</cite> to perform the
@@ -883,7 +909,8 @@ operation on all indices.</p></li>
 <li><p><strong>name</strong> – The name of the alias to be created or updated</p></li>
 <li><p><strong>body</strong> – The settings for the alias, such as <cite>routing</cite> or
 <cite>filter</cite></p></li>
-<li><p><strong>master_timeout</strong> – Specify timeout for connection to master</p></li>
+<li><p><strong>(</strong><strong>Deprecated</strong> (<em>master_timeout</em>) – use cluster_manager_timeout): Specify timeout for connection to master</p></li>
+<li><p><strong>cluster_manager_timeout</strong> – Specify timeout for connection to cluster_manager</p></li>
 <li><p><strong>timeout</strong> – Explicit timestamp for the document</p></li>
 </ul>
 </dd>
@@ -895,7 +922,7 @@ operation on all indices.</p></li>
 <span class="sig-name descname"><span class="pre">put_index_template</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/opensearchpy/client/indices.html#IndicesClient.put_index_template"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opensearchpy.client.indices.IndicesClient.put_index_template" title="Permalink to this definition"></a></dt>
 <dd><p>Creates or updates an index template.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> – The name of the template</p></li>
 <li><p><strong>body</strong> – The template definition</p></li>
@@ -903,7 +930,8 @@ operation on all indices.</p></li>
 template</p></li>
 <li><p><strong>create</strong> – Whether the index template should only be added if
 new or can also replace an existing one</p></li>
-<li><p><strong>master_timeout</strong> – Specify timeout for connection to master</p></li>
+<li><p><strong>(</strong><strong>Deprecated</strong> (<em>master_timeout</em>) – use cluster_manager_timeout): Specify timeout for connection to master</p></li>
+<li><p><strong>cluster_manager_timeout</strong> – Specify timeout for connection to cluster_manager</p></li>
 </ul>
 </dd>
 </dl>
@@ -914,7 +942,7 @@ new or can also replace an existing one</p></li>
 <span class="sig-name descname"><span class="pre">put_mapping</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/opensearchpy/client/indices.html#IndicesClient.put_mapping"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opensearchpy.client.indices.IndicesClient.put_mapping" title="Permalink to this definition"></a></dt>
 <dd><p>Updates the index mappings.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>body</strong> – The mapping definition</p></li>
 <li><p><strong>index</strong> – A comma-separated list of index names the mapping
@@ -928,7 +956,8 @@ concrete indices that are open, closed or both.  Valid choices: open,
 closed, hidden, none, all  Default: open</p></li>
 <li><p><strong>ignore_unavailable</strong> – Whether specified concrete indices
 should be ignored when unavailable (missing or closed)</p></li>
-<li><p><strong>master_timeout</strong> – Specify timeout for connection to master</p></li>
+<li><p><strong>(</strong><strong>Deprecated</strong> (<em>master_timeout</em>) – use cluster_manager_timeout): Specify timeout for connection to master</p></li>
+<li><p><strong>cluster_manager_timeout</strong> – Specify timeout for connection to cluster_manager</p></li>
 <li><p><strong>timeout</strong> – Explicit operation timeout</p></li>
 <li><p><strong>write_index_only</strong> – When true, applies mappings only to the
 write index of an alias or data stream</p></li>
@@ -942,7 +971,7 @@ write index of an alias or data stream</p></li>
 <span class="sig-name descname"><span class="pre">put_settings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/opensearchpy/client/indices.html#IndicesClient.put_settings"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opensearchpy.client.indices.IndicesClient.put_settings" title="Permalink to this definition"></a></dt>
 <dd><p>Updates the index settings.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>body</strong> – The index settings to be updated</p></li>
 <li><p><strong>index</strong> – A comma-separated list of index names; use <cite>_all</cite> or
@@ -957,7 +986,8 @@ closed, hidden, none, all  Default: open</p></li>
 false)</p></li>
 <li><p><strong>ignore_unavailable</strong> – Whether specified concrete indices
 should be ignored when unavailable (missing or closed)</p></li>
-<li><p><strong>master_timeout</strong> – Specify timeout for connection to master</p></li>
+<li><p><strong>(</strong><strong>Deprecated</strong> (<em>master_timeout</em>) – use cluster_manager_timeout): Specify timeout for connection to master</p></li>
+<li><p><strong>cluster_manager_timeout</strong> – Specify timeout for connection to cluster_manager</p></li>
 <li><p><strong>preserve_existing</strong> – Whether to update existing settings. If
 set to <cite>true</cite> existing settings on an index remain unchanged, the
 default is <cite>false</cite></p></li>
@@ -972,13 +1002,14 @@ default is <cite>false</cite></p></li>
 <span class="sig-name descname"><span class="pre">put_template</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/opensearchpy/client/indices.html#IndicesClient.put_template"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opensearchpy.client.indices.IndicesClient.put_template" title="Permalink to this definition"></a></dt>
 <dd><p>Creates or updates an index template.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> – The name of the template</p></li>
 <li><p><strong>body</strong> – The template definition</p></li>
 <li><p><strong>create</strong> – Whether the index template should only be added if
 new or can also replace an existing one</p></li>
-<li><p><strong>master_timeout</strong> – Specify timeout for connection to master</p></li>
+<li><p><strong>(</strong><strong>Deprecated</strong> (<em>master_timeout</em>) – use cluster_manager_timeout): Specify timeout for connection to master</p></li>
+<li><p><strong>cluster_manager_timeout</strong> – Specify timeout for connection to cluster_manager</p></li>
 <li><p><strong>order</strong> – The order for this template when merging multiple
 matching ones (higher numbers are merged later, overriding the lower
 numbers)</p></li>
@@ -992,7 +1023,7 @@ numbers)</p></li>
 <span class="sig-name descname"><span class="pre">recovery</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/opensearchpy/client/indices.html#IndicesClient.recovery"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opensearchpy.client.indices.IndicesClient.recovery" title="Permalink to this definition"></a></dt>
 <dd><p>Returns information about ongoing index shard recoveries.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>index</strong> – A comma-separated list of index names; use <cite>_all</cite> or
 empty string to perform the operation on all indices</p></li>
@@ -1010,7 +1041,7 @@ shard recovery</p></li>
 <span class="sig-name descname"><span class="pre">refresh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/opensearchpy/client/indices.html#IndicesClient.refresh"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opensearchpy.client.indices.IndicesClient.refresh" title="Permalink to this definition"></a></dt>
 <dd><p>Performs the refresh operation in one or more indices.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>index</strong> – A comma-separated list of index names; use <cite>_all</cite> or
 empty string to perform the operation on all indices</p></li>
@@ -1032,7 +1063,7 @@ should be ignored when unavailable (missing or closed)</p></li>
 <span class="sig-name descname"><span class="pre">reload_search_analyzers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/opensearchpy/client/indices.html#IndicesClient.reload_search_analyzers"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opensearchpy.client.indices.IndicesClient.reload_search_analyzers" title="Permalink to this definition"></a></dt>
 <dd><p>Reloads an index’s search analyzers and their resources.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>index</strong> – A comma-separated list of index names to reload
 analyzers for</p></li>
@@ -1059,7 +1090,7 @@ should be ignored when unavailable (missing or closed)</p></li>
 or be removed in a future version</p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> – A comma-separated list of names or wildcard
 expressions</p></li>
@@ -1077,7 +1108,7 @@ closed, hidden, none, all  Default: open</p></li>
 <dd><p>Updates an alias to point to a new index when the existing index is considered
 to be too large or too old.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>alias</strong> – The name of the alias to rollover</p></li>
 <li><p><strong>body</strong> – The conditions that needs to be met for executing
@@ -1086,7 +1117,8 @@ rollover</p></li>
 <li><p><strong>dry_run</strong> – If set to true the rollover action will only be
 validated but not actually performed even if a condition matches. The
 default is false</p></li>
-<li><p><strong>master_timeout</strong> – Specify timeout for connection to master</p></li>
+<li><p><strong>(</strong><strong>Deprecated</strong> (<em>master_timeout</em>) – use cluster_manager_timeout): Specify timeout for connection to master</p></li>
+<li><p><strong>cluster_manager_timeout</strong> – Specify timeout for connection to cluster_manager</p></li>
 <li><p><strong>timeout</strong> – Explicit operation timeout</p></li>
 <li><p><strong>wait_for_active_shards</strong> – Set the number of active shards to
 wait for on the newly created rollover index before the operation
@@ -1101,7 +1133,7 @@ returns.</p></li>
 <span class="sig-name descname"><span class="pre">segments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/opensearchpy/client/indices.html#IndicesClient.segments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opensearchpy.client.indices.IndicesClient.segments" title="Permalink to this definition"></a></dt>
 <dd><p>Provides low-level information about segments in a Lucene index.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>index</strong> – A comma-separated list of index names; use <cite>_all</cite> or
 empty string to perform the operation on all indices</p></li>
@@ -1124,7 +1156,7 @@ should be ignored when unavailable (missing or closed)</p></li>
 <span class="sig-name descname"><span class="pre">shard_stores</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/opensearchpy/client/indices.html#IndicesClient.shard_stores"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opensearchpy.client.indices.IndicesClient.shard_stores" title="Permalink to this definition"></a></dt>
 <dd><p>Provides store information for shard copies of indices.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>index</strong> – A comma-separated list of index names; use <cite>_all</cite> or
 empty string to perform the operation on all indices</p></li>
@@ -1149,7 +1181,7 @@ red, all</p></li>
 <span class="sig-name descname"><span class="pre">shrink</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/opensearchpy/client/indices.html#IndicesClient.shrink"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opensearchpy.client.indices.IndicesClient.shrink" title="Permalink to this definition"></a></dt>
 <dd><p>Allow to shrink an existing index into a new index with fewer primary shards.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>index</strong> – The name of the source index to shrink</p></li>
 <li><p><strong>target</strong> – The name of the target index to shrink into</p></li>
@@ -1157,7 +1189,8 @@ red, all</p></li>
 and <cite>aliases</cite>)</p></li>
 <li><p><strong>copy_settings</strong> – whether or not to copy settings from the
 source index (defaults to false)</p></li>
-<li><p><strong>master_timeout</strong> – Specify timeout for connection to master</p></li>
+<li><p><strong>(</strong><strong>Deprecated</strong> (<em>master_timeout</em>) – use cluster_manager_timeout): Specify timeout for connection to master</p></li>
+<li><p><strong>cluster_manager_timeout</strong> – Specify timeout for connection to cluster_manager</p></li>
 <li><p><strong>timeout</strong> – Explicit operation timeout</p></li>
 <li><p><strong>wait_for_active_shards</strong> – Set the number of active shards to
 wait for on the shrunken index before the operation returns.</p></li>
@@ -1172,7 +1205,7 @@ wait for on the shrunken index before the operation returns.</p></li>
 <dd><p>Simulate matching the given index name against the index templates in the
 system</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> – The name of the index (it must be a concrete index
 name)</p></li>
@@ -1183,7 +1216,8 @@ template for simulation purposes</p></li>
 <li><p><strong>create</strong> – Whether the index template we optionally defined in
 the body should only be dry-run added if new or can also replace an
 existing one</p></li>
-<li><p><strong>master_timeout</strong> – Specify timeout for connection to master</p></li>
+<li><p><strong>(</strong><strong>Deprecated</strong> (<em>master_timeout</em>) – use cluster_manager_timeout): Specify timeout for connection to master</p></li>
+<li><p><strong>cluster_manager_timeout</strong> – Specify timeout for connection to cluster_manager</p></li>
 </ul>
 </dd>
 </dl>
@@ -1194,7 +1228,7 @@ existing one</p></li>
 <span class="sig-name descname"><span class="pre">simulate_template</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/opensearchpy/client/indices.html#IndicesClient.simulate_template"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opensearchpy.client.indices.IndicesClient.simulate_template" title="Permalink to this definition"></a></dt>
 <dd><p>Simulate resolving the given template name or body</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>body</strong> – New index template definition to be simulated, if no
 index template name is specified</p></li>
@@ -1204,7 +1238,8 @@ template for simulation purposes</p></li>
 <li><p><strong>create</strong> – Whether the index template we optionally defined in
 the body should only be dry-run added if new or can also replace an
 existing one</p></li>
-<li><p><strong>master_timeout</strong> – Specify timeout for connection to master</p></li>
+<li><p><strong>(</strong><strong>Deprecated</strong> (<em>master_timeout</em>) – use cluster_manager_timeout): Specify timeout for connection to master</p></li>
+<li><p><strong>cluster_manager_timeout</strong> – Specify timeout for connection to cluster_manager</p></li>
 </ul>
 </dd>
 </dl>
@@ -1216,7 +1251,7 @@ existing one</p></li>
 <dd><p>Allows you to split an existing index into a new index with more primary
 shards.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>index</strong> – The name of the source index to split</p></li>
 <li><p><strong>target</strong> – The name of the target index to split into</p></li>
@@ -1224,7 +1259,8 @@ shards.</p>
 and <cite>aliases</cite>)</p></li>
 <li><p><strong>copy_settings</strong> – whether or not to copy settings from the
 source index (defaults to false)</p></li>
-<li><p><strong>master_timeout</strong> – Specify timeout for connection to master</p></li>
+<li><p><strong>(</strong><strong>Deprecated</strong> (<em>master_timeout</em>) – use cluster_manager_timeout): Specify timeout for connection to master</p></li>
+<li><p><strong>cluster_manager_timeout</strong> – Specify timeout for connection to cluster_manager</p></li>
 <li><p><strong>timeout</strong> – Explicit operation timeout</p></li>
 <li><p><strong>wait_for_active_shards</strong> – Set the number of active shards to
 wait for on the shrunken index before the operation returns.</p></li>
@@ -1238,7 +1274,7 @@ wait for on the shrunken index before the operation returns.</p></li>
 <span class="sig-name descname"><span class="pre">stats</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metric</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/opensearchpy/client/indices.html#IndicesClient.stats"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opensearchpy.client.indices.IndicesClient.stats" title="Permalink to this definition"></a></dt>
 <dd><p>Provides statistics on operations happening in an index.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>index</strong> – A comma-separated list of index names; use <cite>_all</cite> or
 empty string to perform the operation on all indices</p></li>
@@ -1281,7 +1317,7 @@ level  Valid choices: cluster, indices, shards  Default: indices</p></li>
 <dd><p>Unfreezes an index. When a frozen index is unfrozen, the index goes through the
 normal recovery process and becomes writeable again.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>index</strong> – The name of the index to unfreeze</p></li>
 <li><p><strong>allow_no_indices</strong> – Whether to ignore if a wildcard indices
@@ -1292,7 +1328,8 @@ concrete indices that are open, closed or both.  Valid choices: open,
 closed, hidden, none, all  Default: closed</p></li>
 <li><p><strong>ignore_unavailable</strong> – Whether specified concrete indices
 should be ignored when unavailable (missing or closed)</p></li>
-<li><p><strong>master_timeout</strong> – Specify timeout for connection to master</p></li>
+<li><p><strong>(</strong><strong>Deprecated</strong> (<em>master_timeout</em>) – use cluster_manager_timeout): Specify timeout for connection to master</p></li>
+<li><p><strong>cluster_manager_timeout</strong> – Specify timeout for connection to cluster_manager</p></li>
 <li><p><strong>timeout</strong> – Explicit operation timeout</p></li>
 <li><p><strong>wait_for_active_shards</strong> – Sets the number of active shards to
 wait for before the operation returns.</p></li>
@@ -1306,10 +1343,11 @@ wait for before the operation returns.</p></li>
 <span class="sig-name descname"><span class="pre">update_aliases</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/opensearchpy/client/indices.html#IndicesClient.update_aliases"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opensearchpy.client.indices.IndicesClient.update_aliases" title="Permalink to this definition"></a></dt>
 <dd><p>Updates index aliases.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>body</strong> – The definition of <cite>actions</cite> to perform</p></li>
-<li><p><strong>master_timeout</strong> – Specify timeout for connection to master</p></li>
+<li><p><strong>(</strong><strong>Deprecated</strong> (<em>master_timeout</em>) – use cluster_manager_timeout): Specify timeout for connection to master</p></li>
+<li><p><strong>cluster_manager_timeout</strong> – Specify timeout for connection to cluster_manager</p></li>
 <li><p><strong>timeout</strong> – Request timeout</p></li>
 </ul>
 </dd>
@@ -1321,7 +1359,7 @@ wait for before the operation returns.</p></li>
 <span class="sig-name descname"><span class="pre">upgrade</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/opensearchpy/client/indices.html#IndicesClient.upgrade"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opensearchpy.client.indices.IndicesClient.upgrade" title="Permalink to this definition"></a></dt>
 <dd><p>DEPRECATED Upgrades to the current version of Lucene.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>index</strong> – A comma-separated list of index names; use <cite>_all</cite> or
 empty string to perform the operation on all indices</p></li>
@@ -1347,7 +1385,7 @@ block until the all segments are upgraded (default: false)</p></li>
 <span class="sig-name descname"><span class="pre">validate_query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/opensearchpy/client/indices.html#IndicesClient.validate_query"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opensearchpy.client.indices.IndicesClient.validate_query" title="Permalink to this definition"></a></dt>
 <dd><p>Allows a user to validate a potentially expensive query without executing it.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>body</strong> – The query definition specified with the Query DSL</p></li>
 <li><p><strong>index</strong> – A comma-separated list of index names to restrict
